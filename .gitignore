@@ -1,0 +1,41 @@
+# Visual Studio / Visual Studio Code
+.vs/
+.vscode/
+
+# Build output
+bin/
+obj/
+
+# NuGet
+*.nuget.cache
+*.dll
+*.exe
+*.pdb
+*.dll.config
+packages/
+*.nupkg
+project.lock.json
+
+# User-specific files
+*.suo
+*.user
+*.userprefs
+*.usertasks
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+
+# Logs and databases
+*.log
+*.sqlite
+*.sqlite3
+
+# Misc
+Thumbs.db
+desktop.ini
+
+# Exclude node_modules except package.json and package-lock.json if present
+node_modules/
+!node_modules/package.json
+!node_modules/package-lock.json

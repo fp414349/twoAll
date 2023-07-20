@@ -1,0 +1,43 @@
+﻿@page
+@model Clients.Pages.ClientsData.IndexModel
+@{
+}
+
+<!-- קישור לספריית JQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- קישור לספריית jQuery UI -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
+
+<br />
+<h2>list clients</h2>
+<a class="btn btn-primary btn-sm" href="/ClientsData/Create">new user</a>
+<table id="sortable-table" class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Phon</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.liscClients)
+        {
+            <tr data-id="@item.id">
+                <td>@item.id</td>
+                <td>@item.name</td>
+                <td>@item.email</td>
+                <td>@item.phon</td>
+                <td>@item.adress</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="/ClientsData/Edit?id=@item.id">edit</a>
+                    <a class="btn btn-danger btn-sm" href="/ClientsData/Delete?id=@item.id">delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
